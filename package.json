@@ -1,0 +1,27 @@
+{
+  "name": "uber-blog-api",
+  "version": "1.0.0",
+  "description": "nodeJs api for uberblog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/.bin/jasmine-node *.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwyserDev/uber-blog-api.git"
+  },
+  "author": "Francois van der Merwe (SwyserDev)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwyserDev/uber-blog-api/issues"
+  },
+  "homepage": "https://github.com/SwyserDev/uber-blog-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jasmine-node": "^1.14.5",
+    "node-notifier": "^4.6.1",
+    "request": "^2.78.0"
+  }
+}

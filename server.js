@@ -27,15 +27,16 @@ router.get('/', function(req, res) {
 
 app.use('/api/', blogRoutes.routes());
 
+app.listen(8080);
 
-var server = http.createServer(app);
-server.listen(8080, 'localhost');
-server.on('listening', function() {
-  console.log('Express server started on port ' + server.address().port + ' at ' + server.address().address);
-  notifier.notify({
-    title: 'Server',
-    message: 'Express server started on port ' + server.address().port + ' at ' + server.address().address,
-    sound: 'Hero',
-    wait: false
-  });
-});
+// var server = http.createServer(app);
+// server.listen(8080, 'localhost');
+// server.on('listening', function() {
+//   console.log('Express server started on port ' + server.address().port + ' at ' + server.address().address);
+//   notifier.notify({
+//     title: 'Server',
+//     message: 'Express server started on port ' + server.address().port + ' at ' + server.address().address,
+//     sound: 'Hero',
+//     wait: false
+//   });
+// });

@@ -1,15 +1,13 @@
-FROM node:argon
+# Use Official NodeJs base image
+FROM node
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /noderserver/
+WORKDIR /noderserver
 
-# Install app dependencies
-COPY package.json /usr/src/app/
+# Clone NodeJs project into working folder and install dependinacies
+RUN git clone https://github.com/SwyserDev/uber-blog-api.git .
 RUN npm install
 
-# Bundle app source
-COPY . /usr/src/app
-
+# Start node server
 EXPOSE 8080
 CMD [ "npm", "start" ]

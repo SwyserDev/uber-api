@@ -28,6 +28,7 @@ router.get('/', function(req, res) {
 app.use('/api/', blogRoutes.routes());
 
 app.listen(8080);
+console.log('Server running on port 8080...');
 
 // var server = http.createServer(app);
 // server.listen(8080, 'localhost');

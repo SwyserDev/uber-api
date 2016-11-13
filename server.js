@@ -25,7 +25,7 @@ router.get('/', function(req, res) {
   res.redirect('index.html');
 });
 
-app.use('/api/', blogRoutes.routes());
+app.use('/api/', blogRoutes.routes()); 
 
 app.listen(8080);
 console.log('Server running on port 8080...');

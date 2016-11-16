@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var http = require('http');
 var notifier = require('node-notifier');
+var expressWs = require('express-ws')(app);
 
 // Custom module imports
 var blogRoutes = require('./blogRoutes.js');
@@ -29,15 +30,3 @@ app.use('/api/', blogRoutes.routes());
 
 app.listen(8080);
 console.log('Server running on port 8080...');
-
-// var server = http.createServer(app);
-// server.listen(8080, 'localhost');
-// server.on('listening', function() {
-//   console.log('Express server started on port ' + server.address().port + ' at ' + server.address().address);
-//   notifier.notify({
-//     title: 'Server',
-//     message: 'Express server started on port ' + server.address().port + ' at ' + server.address().address,
-//     sound: 'Hero',
-//     wait: false
-//   });
-// });

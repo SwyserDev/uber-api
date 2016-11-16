@@ -5,7 +5,7 @@ RUN mkdir -p /noderserver/
 WORKDIR /noderserver
 
 # Clone NodeJs project into working folder and install dependinacies
-RUN git clone https://github.com/SwyserDev/uber-blog-api.git .
+RUN git clone https://github.com/SwyserDev/uber-api.git .
 RUN npm install
 
 # Start node server
